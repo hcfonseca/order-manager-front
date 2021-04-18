@@ -83,7 +83,7 @@ const orders = [
 
 const LatestOrders = (props) => (
   <Card {...props}>
-    <CardHeader title="Latest Orders" />
+    <CardHeader title="Últimos pedidos" />
     <Divider />
     <PerfectScrollbar>
       <Box sx={{ minWidth: 800 }}>
@@ -91,21 +91,15 @@ const LatestOrders = (props) => (
           <TableHead>
             <TableRow>
               <TableCell>
-                Order Ref
+                Pedido
               </TableCell>
               <TableCell>
-                Customer
+                Cliente
               </TableCell>
               <TableCell sortDirection="desc">
-                <Tooltip
-                  enterDelay={300}
-                  title="Sort"
-                >
-                  <TableSortLabel
-                    active
-                    direction="desc"
-                  >
-                    Date
+                <Tooltip enterDelay={300} title="Sort" >
+                  <TableSortLabel active direction="desc">
+                    Data
                   </TableSortLabel>
                 </Tooltip>
               </TableCell>
