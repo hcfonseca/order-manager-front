@@ -20,7 +20,7 @@ const ProductListToolbar = (props) => (
     >
       <Button
         component={Link}
-        to="/app/customers/create"
+        to="/app/products/create"
         color="primary"
         variant="contained"
       >

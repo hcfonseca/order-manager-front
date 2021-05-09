@@ -51,7 +51,6 @@ const CustomerProfile = (props) => {
             >
               <TextField
                 fullWidth
-                helperText="Escreva o nome do cliente"
                 label="Nome"
                 name="name"
                 onChange={handleChange}

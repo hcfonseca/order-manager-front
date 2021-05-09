@@ -4,12 +4,12 @@ import {
   Container,
   Grid
 } from '@material-ui/core';
-import CustomerProfile from '../components/customer/create/CustomerProfile';
+import ProductProfile from '../components/product/create/ProductProfile';
 
-const CustomerCreate = () => (
+const ProductCreate = () => (
   <>
     <Helmet>
-      <title>Criar Cliente</title>
+      <title>Cadastrar Produto</title>
     </Helmet>
     <Box
       sx={{
@@ -29,7 +29,7 @@ const CustomerCreate = () => (
             md={12}
             xs={12}
           >
-            <CustomerProfile />
+            <ProductProfile />
           </Grid>
         </Grid>
       </Container>
@@ -37,4 +37,4 @@ const CustomerCreate = () => (
   </>
 );
 
-export default CustomerCreate;
+export default ProductCreate;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import {
   Box,
   Button,
@@ -14,10 +14,9 @@ import {Link} from "react-router-dom";
 
 const ProductProfile = (props) => {
   const [values, setValues] = useState({
-    name: 'Katarina',
-    address: 'Rua Vasco da Gama',
-    email: 'demo@devias.io',
-    phone: '21992923131',
+    name: 'jfehfkjlehfe',
+    price: '40.00',
+    description: 'efoiuehwlfkwerhflkwhrfgihofivdshjkjgkpwfrhgboifhgbpwvw',
   });
 
   const handleChange = (event) => {
@@ -36,9 +35,9 @@ const ProductProfile = (props) => {
       <Card>
         <CardHeader
           subheader="Essas informações podem ser editadas"
-          title="Criar cliente"
+          title="Cadastrar Produto"
         />
-        <Divider />
+        <Divider/>
         <CardContent>
           <Grid
             container
@@ -51,7 +50,6 @@ const ProductProfile = (props) => {
             >
               <TextField
                 fullWidth
-                helperText="Escreva o nome do cliente"
                 label="Nome"
                 name="name"
                 onChange={handleChange}
@@ -67,45 +65,32 @@ const ProductProfile = (props) => {
             >
               <TextField
                 fullWidth
-                label="Email"
-                name="email"
+                label="Preço"
+                name="price"
                 onChange={handleChange}
                 required
-                value={values.email}
+                value={values.price}
                 variant="outlined"
               />
             </Grid>
             <Grid
               item
-              md={6}
+              md={12}
               xs={12}
             >
               <TextField
                 fullWidth
-                label="Endereço"
-                name="address"
+                label="Descrição"
+                name="description"
                 onChange={handleChange}
                 required
-                value={values.address}
-                variant="outlined"
-              />
-            </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}>
-              <TextField
-                fullWidth
-                label="Telefone"
-                name="phone"
-                onChange={handleChange}
-                value={values.phone}
+                value={values.description}
                 variant="outlined"
               />
             </Grid>
           </Grid>
         </CardContent>
-        <Divider />
+        <Divider/>
         <Box
           sx={{
             display: 'flex',
@@ -115,11 +100,11 @@ const ProductProfile = (props) => {
         >
           <Button
             component={Link}
-            to="/app/customers"
+            to="/app/products"
             color="primary"
             variant="contained"
           >
-            Criar Cliente
+            Cadastrar
           </Button>
         </Box>
       </Card>

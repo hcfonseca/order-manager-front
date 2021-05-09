@@ -5,7 +5,8 @@ import ProductList from './pages/ProductList';
 import NotFound from './pages/NotFound';
 import DashboardLayout from './components/DashboardLayout';
 import MainLayout from './components/MainLayout';
-import Account from './pages/CustomerCreate';
+import CustomerCreate from './pages/CustomerCreate';
+import ProductCreate from './pages/ProductCreate';
 import React from "react";
 
 const routes = [
@@ -13,20 +14,19 @@ const routes = [
     path: 'app',
     element: <DashboardLayout/>,
     children: [
-      {
-        path: 'dashboard', element: <Dashboard/>
-      },
+      {path: 'dashboard', element: <Dashboard/>},
       {
         path: 'customers',
         children: [
           {path: '/', element: <CustomerList/>},
-          {path: 'create', element: <Account/>}
+          {path: 'create', element: <CustomerCreate/>}
         ]
       },
       {
         path: 'products',
         children: [
-          {path: '/', element: <ProductList/>}
+          {path: '/', element: <ProductList/>},
+          {path: 'create', element: <ProductCreate/>}
         ]
       },
     ]
