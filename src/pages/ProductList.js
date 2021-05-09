@@ -1,14 +1,14 @@
 import { Helmet } from 'react-helmet';
 import { Box, Container } from '@material-ui/core';
-import CustomerListResults from '../components/customer/list/CustomerListResults';
-import CustomerListToolbar from '../components/customer/list/CustomerListToolbar';
-import customers from '../__mocks__/customers';
+import ProductListResults from '../components/product/list/ProductListResults';
+import ProductListToolbar from '../components/product/list/ProductListToolbar';
+import products from '../__mocks__/products';
 import React from "react";
 
 const CustomerList = () => (
   <>
     <Helmet>
-      <title>Clientes</title>
+      <title>Produtos</title>
     </Helmet>
     <Box
       sx={{
@@ -18,9 +18,9 @@ const CustomerList = () => (
       }}
     >
       <Container maxWidth={false}>
-        <CustomerListToolbar />
+        <ProductListToolbar />
         <Box sx={{ pt: 3 }}>
-          <CustomerListResults customers={customers} />
+          <ProductListResults products={products} />
         </Box>
       </Container>
     </Box>

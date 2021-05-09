@@ -30,7 +30,7 @@ const items = [
     title: 'Clientes'
   },
   {
-    href: '/app/customers',
+    href: '/app/products',
     icon: ShoppingBagIcon,
     title: 'Produtos'
   },
