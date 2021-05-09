@@ -7,6 +7,7 @@ import {
   InputAdornment,
   SvgIcon
 } from '@material-ui/core';
+import { Link } from 'react-router-dom';
 import { Search as SearchIcon } from 'react-feather';
 
 const CustomerListToolbar = (props) => (
@@ -17,17 +18,13 @@ const CustomerListToolbar = (props) => (
         justifyContent: 'flex-end'
       }}
     >
-      <Button>
-        Import
-      </Button>
-      <Button sx={{ mx: 1 }}>
-        Export
-      </Button>
       <Button
+        component={Link}
+        to="/app/customers/create"
         color="primary"
         variant="contained"
       >
-        Add customer
+        Novo Cliente
       </Button>
     </Box>
     <Box sx={{ mt: 3 }}>
@@ -48,7 +45,7 @@ const CustomerListToolbar = (props) => (
                   </InputAdornment>
                 )
               }}
-              placeholder="Search customer"
+              placeholder="Buscar cliente"
               variant="outlined"
             />
           </Box>

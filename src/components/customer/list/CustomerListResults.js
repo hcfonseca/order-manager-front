@@ -15,7 +15,7 @@ import {
   TableRow,
   Typography
 } from '@material-ui/core';
-import getInitials from '../../utils/getInitials';
+import getInitials from '../../../utils/getInitials';
 
 const CustomerListResults = ({ customers, ...rest }) => {
   const [selectedCustomerIds, setSelectedCustomerIds] = useState([]);
@@ -69,31 +69,23 @@ const CustomerListResults = ({ customers, ...rest }) => {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell padding="checkbox">
-                  <Checkbox
-                    checked={selectedCustomerIds.length === customers.length}
-                    color="primary"
-                    indeterminate={
-                      selectedCustomerIds.length > 0
-                      && selectedCustomerIds.length < customers.length
-                    }
-                    onChange={handleSelectAll}
-                  />
-                </TableCell>
                 <TableCell>
-                  Name
+                  Nome
                 </TableCell>
                 <TableCell>
                   Email
                 </TableCell>
                 <TableCell>
-                  Location
+                  Endereço
                 </TableCell>
                 <TableCell>
-                  Phone
+                  Telefone
                 </TableCell>
                 <TableCell>
-                  Registration date
+                  Saldo
+                </TableCell>
+                <TableCell>
+                  Data de registro
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -101,33 +93,18 @@ const CustomerListResults = ({ customers, ...rest }) => {
               {customers.slice(0, limit).map((customer) => (
                 <TableRow
                   hover
-                  key={customer.id}
-                  selected={selectedCustomerIds.indexOf(customer.id) !== -1}
+                  key={customer.name}
+                  selected={selectedCustomerIds.indexOf(customer.name) !== -1}
                 >
-                  <TableCell padding="checkbox">
-                    <Checkbox
-                      checked={selectedCustomerIds.indexOf(customer.id) !== -1}
-                      onChange={(event) => handleSelectOne(event, customer.id)}
-                      value="true"
-                    />
-                  </TableCell>
                   <TableCell>
                     <Box
                       sx={{
                         alignItems: 'center',
                         display: 'flex'
-                      }}
-                    >
-                      <Avatar
-                        src={customer.avatarUrl}
-                        sx={{ mr: 2 }}
-                      >
-                        {getInitials(customer.name)}
-                      </Avatar>
+                      }}>
                       <Typography
                         color="textPrimary"
-                        variant="body1"
-                      >
+                        variant="body1">
                         {customer.name}
                       </Typography>
                     </Box>
@@ -136,10 +113,13 @@ const CustomerListResults = ({ customers, ...rest }) => {
                     {customer.email}
                   </TableCell>
                   <TableCell>
-                    {`${customer.address.city}, ${customer.address.state}, ${customer.address.country}`}
+                    {customer.address}
                   </TableCell>
                   <TableCell>
                     {customer.phone}
+                  </TableCell>
+                  <TableCell>
+                    {customer.balance}
                   </TableCell>
                   <TableCell>
                     {moment(customer.createdAt).format('DD/MM/YYYY')}
