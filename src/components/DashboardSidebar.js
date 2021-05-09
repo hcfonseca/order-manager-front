@@ -35,7 +35,7 @@ const items = [
     title: 'Produtos'
   },
   {
-    href: '/app/customers',
+    href: '/app/orders',
     icon: CartIcon,
     title: 'Pedidos'
   },

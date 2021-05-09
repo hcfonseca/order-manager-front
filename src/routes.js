@@ -2,6 +2,7 @@ import {Navigate} from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import CustomerList from './pages/CustomerList';
 import ProductList from './pages/ProductList';
+import OrderList from './pages/OrderList';
 import NotFound from './pages/NotFound';
 import DashboardLayout from './components/DashboardLayout';
 import MainLayout from './components/MainLayout';
@@ -27,6 +28,12 @@ const routes = [
         children: [
           {path: '/', element: <ProductList/>},
           {path: 'create', element: <ProductCreate/>}
+        ]
+      },
+      {
+        path: 'orders',
+        children: [
+          {path: '/', element: <OrderList/>},
         ]
       },
     ]
