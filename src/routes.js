@@ -1,27 +1,36 @@
-import { Navigate } from 'react-router-dom';
+import {Navigate} from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import CustomerList from './pages/CustomerList';
 import NotFound from './pages/NotFound';
 import DashboardLayout from './components/DashboardLayout';
 import MainLayout from './components/MainLayout';
+import Account from './pages/CustomerCreate';
 import React from "react";
 
 const routes = [
   {
     path: 'app',
-    element: <DashboardLayout />,
+    element: <DashboardLayout/>,
     children: [
-      { path: 'dashboard', element: <Dashboard /> },
-      { path: 'customers', element: <CustomerList /> },
+      {
+        path: 'dashboard', element: <Dashboard/>
+      },
+      {
+        path: 'customers',
+        children: [
+          {path: '/', element: <CustomerList/>},
+          {path: 'create', element: <Account/>}
+        ]
+      },
     ]
   },
   {
     path: '/',
-    element: <MainLayout />,
+    element: <MainLayout/>,
     children: [
-      { path: '404', element: <NotFound /> },
-      { path: '/', element: <Navigate to="/app/dashboard" /> },
-      { path: '*', element: <Navigate to="/404" /> }
+      {path: '404', element: <NotFound/>},
+      {path: '/', element: <Navigate to="/app/dashboard"/>},
+      {path: '*', element: <Navigate to="/404"/>}
     ]
   }
 ];
