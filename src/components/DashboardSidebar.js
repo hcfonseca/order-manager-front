@@ -10,20 +10,13 @@ import {
 import {
   AlertCircle as AlertCircleIcon,
   BarChart as BarChartIcon,
+  List as ListIcon,
   Lock as LockIcon,
-  Settings as SettingsIcon,
   ShoppingBag as ShoppingBagIcon,
-  User as UserIcon,
-  UserPlus as UserPlusIcon,
+  ShoppingCart as CartIcon,
   Users as UsersIcon
 } from 'react-feather';
 import NavItem from './NavItem';
-
-const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
-};
 
 const items = [
   {
@@ -34,7 +27,22 @@ const items = [
   {
     href: '/app/customers',
     icon: UsersIcon,
-    title: 'Customers'
+    title: 'Clientes'
+  },
+  {
+    href: '/app/customers',
+    icon: ShoppingBagIcon,
+    title: 'Produtos'
+  },
+  {
+    href: '/app/customers',
+    icon: CartIcon,
+    title: 'Pedidos'
+  },
+  {
+    href: '/app/customers',
+    icon: ListIcon,
+    title: 'Eventos'
   },
   {
     href: '/login',
