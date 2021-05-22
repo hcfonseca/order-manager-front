@@ -20,7 +20,7 @@ const OrderListToolbar = (props) => (
     >
       <Button
         component={Link}
-        to="/app/products/create"
+        to="/app/orders/create"
         color="primary"
         variant="contained"
       >

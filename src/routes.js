@@ -8,6 +8,7 @@ import DashboardLayout from './components/DashboardLayout';
 import MainLayout from './components/MainLayout';
 import CustomerCreate from './pages/CustomerCreate';
 import ProductCreate from './pages/ProductCreate';
+import OrderCreate from './pages/OrderCreate';
 import React from "react";
 
 const routes = [
@@ -34,6 +35,7 @@ const routes = [
         path: 'orders',
         children: [
           {path: '/', element: <OrderList/>},
+          {path: 'create', element: <OrderCreate/>}
         ]
       },
     ]

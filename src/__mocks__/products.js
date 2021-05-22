@@ -1,26 +1,23 @@
 export default [
   {
-    name: 'Dropbox',
-    price: '594',
-    description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
+    name: 'Cimento',
+    price: '50',
+    measurement: 'saco',
+    description: 'Saco de cimento de 10kg da marca XYZ',
     createdAt: '27/03/2019'
   },
   {
-    name: 'FEFEFE',
-    price: '14',
-    description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    createdAt: '27/03/2019'
+    name: 'Vergalhão',
+    price: '8',
+    measurement: 'metro',
+    description: 'Vergalhão de 1m cada da marca XYZ',
+    createdAt: '10/02/2020'
   },
   {
-    name: 'GFGFGF',
-    price: '545',
-    description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    createdAt: '27/03/2019'
-  },
-  {
-    name: 'SDVMSDFLV',
-    price: '43',
-    description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-    createdAt: '27/03/2019'
-  },
+    name: 'Areia',
+    price: '20',
+    measurement: 'metro',
+    description: 'Areia da marca XYZ',
+    createdAt: '27/04/2021'
+  }
 ];
